@@ -118,6 +118,9 @@ get_prop(zygote, exported_overlay_prop)
 allow zygote theme_data_file:file r_file_perms;
 allow zygote theme_data_file:dir r_dir_perms;
 
+# ingore spurious denials
+dontaudit zygote self:capability sys_resource;
+
 ###
 ### neverallow rules
 ###
